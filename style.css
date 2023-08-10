@@ -1,6 +1,6 @@
 html {
 	box-sizing: border-box;
-	font-family: 'Karla';
+	font-family: "Karla";
 	font-size: 16px;
 	font-weight: 400;
 }
@@ -9,21 +9,17 @@ body {
 	padding: 20px;
 }
 
-h2,
-h4,
-p {
+h2, h4, p {
 	margin: 0;
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
 	box-sizing: inherit;
 }
 
 #card {
-	width: 600px;
-	height: 400px;
+	/* 	width: 600px;
+	height: 400px; */
 	box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.75);
 	border-radius: 5px;
 	overflow: hidden;
@@ -38,6 +34,8 @@ p {
 }
 
 #bottom-section {
+	display: flex;
+	flex-direction: column;
 	width: 100%;
 	height: 55%;
 	/* 	border: 2px solid blue; */
@@ -45,21 +43,25 @@ p {
 }
 
 #bottom-left-section {
-	display: inline-block;
-	width: 50%;
+	/* 	display: inline-block; */
+	/* 	width: 50%; */
+	/* 	width: 100%; */
 	height: 100%;
-	vertical-align: top;
+	/* 	vertical-align: top; */
 	background-color: #2ec9c4;
 	padding: 25px;
+	flex-basis: 50%;
 }
 
 #bottom-right-section {
-	display: inline-block;
-	width: 50%;
+	/* 	display: inline-block; */
+	/* 	width: 50%; */
+	/* 	width: 100%; */
 	height: 100%;
-	vertical-align: top;
+	/* 	vertical-align: top; */
 	background-color: #53e6e1;
 	padding: 25px;
+	flex-basis: 50%;
 }
 
 #top-section h2 {
@@ -87,8 +89,8 @@ button {
 
 button:hover {
 	cursor: pointer;
-	background-color: #A9C42D;
-	transform: scale(1.02)
+	background-color: #a9c42d;
+	transform: scale(1.02);
 }
 
 #price {
@@ -100,20 +102,19 @@ button:hover {
 	margin-bottom: 25px;
 }
 
-#price-frequency, #price {
-	display: inline-block;
+#price-container {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
 }
 
 #price-frequency {
-	position: relative;
-	top: -3px;
+	/* 	position: relative;
+	top: -3px; */
 	font-size: 0.8rem;
 	opacity: 0.7;
 	margin-left: 5px;
-}
-
-#price-container {
-	margin-bottom: 10px;
+	/* 	margin-left: 5px; */
 }
 
 #bottom-left-section p {
@@ -128,3 +129,22 @@ ul {
 	opacity: 0.8;
 }
 
+/* @media (max-width: 650px) {
+	#bottom-left-section, #bottom-right-section, #card {
+		width: 100%;
+		height: auto;	
+	}
+} */
+
+@media (min-width: 576px) {
+	#card {
+		width: 545px;
+		height: 400px;
+	}
+	#bottom-section {
+		flex-direction: row;
+	}
+	/* 	#bottom-left-section, #bottom-right-section {
+		width: 50%;
+	} */
+}
